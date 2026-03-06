@@ -1,10 +1,15 @@
 # Neural Virtual Analog Modeling of Parametric Audio Effects
 
-This repository contains the PyTorch implementation of a Temporal Convolutional Network (TCN) designed to emulate parametric nonlinear inertial audio effects (specifically, a vacuum-tube guitar preamplifier). The model learns a black-box mapping between a dry input audio signal, a continuous control parameter (e.g., a drive knob), and the saturated output signal.
+This repository contains the PyTorch implementation of a **Temporal Convolutional Network (TCN)** designed to emulate parametric nonlinear inertial audio effects (specifically, a vacuum-tube guitar preamplifier). The model learns a black-box mapping between a dry input audio signal, a continuous control parameter (e.g., a drive knob), and the saturated output signal.
+
+
+This project is the result of a collaboration between: 
+
+**Benjamin Nimmerrichter** (Brno University of Technology) – [xnimme00@vutbr.cz](mailto:xnimme00@vutbr.cz) 
+
+**Václav Bařinka** (Brno University of Technology) – [xbarin10@vutbr.cz](mailto:barinka@vut.cz)
 
 ## 📁 File Structure
-
-Plaintext
 
 ```
 audio_tcn/
@@ -204,3 +209,11 @@ This window is sufficient to capture both the rapid nonlinear clipping of vacuum
 - **Phase Alignment:** Ensure your input and target files are sample-aligned. Even a 1ms offset will cause the ESR loss to fail, resulting in a dull, phasey-sounding model.
 
 - **Training Time:** V3 takes ~20% longer to train than V1 but typically achieves a 15-20% lower Multi-Resolution STFT loss.
+
+
+
+---
+
+## License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
