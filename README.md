@@ -2,7 +2,6 @@
 
 This repository contains the PyTorch implementation of a **Temporal Convolutional Network (TCN)** designed to emulate parametric nonlinear inertial audio effects (specifically, a vacuum-tube guitar preamplifier). The model learns a black-box mapping between a dry input audio signal, a continuous control parameter (e.g., a drive knob), and the saturated output signal.
 
-
 This project is the result of a collaboration between: 
 
 **Benjamin Nimmerrichter** (Brno University of Technology) – [xnimme00@vutbr.cz](mailto:xnimme00@vutbr.cz) 
@@ -26,7 +25,7 @@ audio_tcn/
 ├── results/                  # Directory for JSON logs and benchmark text files
 ├── test_signals/             # Drop your raw, dry .wav files here
 ├── output/                   # Processed and normalized .wav files will appear here
-└── paper/                    # LaTeX source files for the IEEE research paper
+└── paper/                    # LaTeX source files for the EEICT research paper
 ```
 
 ## 🧩 Repository Structure Detailed
@@ -209,8 +208,6 @@ This window is sufficient to capture both the rapid nonlinear clipping of vacuum
 - **Phase Alignment:** Ensure your input and target files are sample-aligned. Even a 1ms offset will cause the ESR loss to fail, resulting in a dull, phasey-sounding model.
 
 - **Training Time:** V3 takes ~20% longer to train than V1 but typically achieves a 15-20% lower Multi-Resolution STFT loss.
-
-
 
 ---
 
