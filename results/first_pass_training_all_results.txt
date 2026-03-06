@@ -1,0 +1,16 @@
+
+************************************************************
+🎉 SUMMARY OF TRAINING RESULTS:
+************************************************************
+
+| Parameter / Feature       | V1 (Base) | V2 (Mix) | V3 (Full) |
+|---------------------------|-----------|----------|-----------|
+| Residual Blocks           | 10        | 10       | 10        |
+| 1x1 Projection            | No        | Yes      | Yes       |
+| Global Skip Connections   | No        | No       | Yes       |
+| Parameter Conditioning    | Concat    | Concat   | FiLM      |
+| Est. Parameter Count      | ~ 31k     | ~ 32k    | ~ 40k     |
+|---------------------------|-----------|----------|-----------|
+| BEST VAL LOSS (Combined)  | 1.431772  | 1.343196 | 1.812751  |
+
+The results are ready to be ported into LaTeX.

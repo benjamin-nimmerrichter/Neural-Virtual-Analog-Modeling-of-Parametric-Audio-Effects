@@ -1,0 +1,44 @@
+
+==============================================================================================================
+🔬 COMPREHENSIVE BENCHMARK: ACCURACY VS. REAL-TIME CAPABILITIES (FS: 48.0kHz)
+==============================================================================================================
+💻 SYSTEM SPECIFICATIONS:
+   OS:        Linux 6.19.5-3-cachyos (x86_64)
+   Node Name: PC-SC6048-NiBe2
+   Processor: AMD Ryzen 5 9600X 6-Core Processor
+   PyTorch:   2.5.1+cu121
+   Device:    CPU (Forced for audio plugin simulation)
+==============================================================================================================
+
+📦 MODEL: V1 | Parameters: 47,489 | Best Val Loss: 2.062930
+--------------------------------------------------------------------------------------------------------------
+Buffer     | Buff Latency    | Proc Time       | Total Latency      | CPU Load     | Status
+--------------------------------------------------------------------------------------------------------------
+64         |       1.33 ms |       0.49 ms |          1.82 ms |       36.7% | ✅ SAFE RT
+128        |       2.67 ms |       0.52 ms |          3.19 ms |       19.5% | ✅ SAFE RT
+256        |       5.33 ms |       0.58 ms |          5.92 ms |       11.0% | ✅ SAFE RT
+512        |      10.67 ms |       0.70 ms |         11.36 ms |        6.5% | ✅ SAFE RT
+👉 Conclusion for V1: Suitable for real-time from buffer size 64 and above.
+
+📦 MODEL: V2 | Parameters: 48,577 | Best Val Loss: 3.038019
+--------------------------------------------------------------------------------------------------------------
+Buffer     | Buff Latency    | Proc Time       | Total Latency      | CPU Load     | Status
+--------------------------------------------------------------------------------------------------------------
+64         |       1.33 ms |       0.50 ms |          1.83 ms |       37.3% | ✅ SAFE RT
+128        |       2.67 ms |       0.54 ms |          3.21 ms |       20.3% | ✅ SAFE RT
+256        |       5.33 ms |       0.60 ms |          5.94 ms |       11.3% | ✅ SAFE RT
+512        |      10.67 ms |       0.72 ms |         11.38 ms |        6.7% | ✅ SAFE RT
+👉 Conclusion for V2: Suitable for real-time from buffer size 64 and above.
+
+📦 MODEL: V3 | Parameters: 49,665 | Best Val Loss: 0.486662
+--------------------------------------------------------------------------------------------------------------
+Buffer     | Buff Latency    | Proc Time       | Total Latency      | CPU Load     | Status
+--------------------------------------------------------------------------------------------------------------
+64         |       1.33 ms |       0.68 ms |          2.02 ms |       51.4% | ✅ SAFE RT
+128        |       2.67 ms |       0.74 ms |          3.40 ms |       27.6% | ✅ SAFE RT
+256        |       5.33 ms |       0.81 ms |          6.15 ms |       15.3% | ✅ SAFE RT
+512        |      10.67 ms |       0.95 ms |         11.62 ms |        8.9% | ✅ SAFE RT
+👉 Conclusion for V3: Suitable for real-time from buffer size 64 and above.
+
+==============================================================================================================
+Note: 'True Real-time' (perceived zero latency) requires Total Latency < 10ms.

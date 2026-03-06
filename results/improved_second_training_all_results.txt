@@ -1,0 +1,20 @@
+
+
+*************************************************************************************
+🎉 ALL TRAINING RUNS COMPLETED! IEEE PAPER SUMMARY TABLE
+*************************************************************************************
+
+| Parameter / Feature       | V1 (Base)  | V2 (Mix)   | V3 (Full)  |
+|---------------------------|------------|------------|------------|
+| Residual Blocks           | 10         | 10         | 10         |
+| 1x1 Projection            | No         | Yes        | Yes        |
+| Global Skip Connections   | No         | No         | Yes        |
+| Parameter Conditioning    | Concat     | Concat     | FiLM       |
+| Est. Parameter Count      | ~ 31k      | ~ 32k      | ~ 40k      |
+|---------------------------|------------|------------|------------|
+| BEST VAL LOSS (Combined)  | 2.062930   | 3.038019   | 0.486662   |
+| TOTAL TRAIN TIME (min)    | 12240.2    | 12992.5    | 14940.3    |
+| AVG EPOCH TIME (sec)      | 24.48      | 25.99      | 29.88      |
+|---------------------------|------------|------------|------------|
+
+Settings: Epochs=500, Batch=32, LR=0.0005, WD=1e-05

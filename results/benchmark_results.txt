@@ -1,0 +1,37 @@
+
+==============================================================================================================
+🔬 COMPREHENSIVE BENCHMARK: ACCURACY VS. REAL-TIME CAPABILITIES (FS: 48.0kHz)
+==============================================================================================================
+
+📦 MODEL: V1 | Parameters: 47,489 | Best Val Loss: 2.062930
+--------------------------------------------------------------------------------------------------------------
+Buffer     | Buff Latency    | Proc Time       | Total Latency      | CPU Load     | Status
+--------------------------------------------------------------------------------------------------------------
+64         |       1.33 ms |       0.48 ms |          1.82 ms |       36.3% | ✅ SAFE RT
+128        |       2.67 ms |       0.52 ms |          3.19 ms |       19.5% | ✅ SAFE RT
+256        |       5.33 ms |       0.58 ms |          5.92 ms |       11.0% | ✅ SAFE RT
+512        |      10.67 ms |       0.70 ms |         11.36 ms |        6.5% | ✅ SAFE RT
+👉 Conclusion for V1: Suitable for real-time from buffer size 64 and above.
+
+📦 MODEL: V2 | Parameters: 48,577 | Best Val Loss: 3.038019
+--------------------------------------------------------------------------------------------------------------
+Buffer     | Buff Latency    | Proc Time       | Total Latency      | CPU Load     | Status
+--------------------------------------------------------------------------------------------------------------
+64         |       1.33 ms |       0.50 ms |          1.84 ms |       37.8% | ✅ SAFE RT
+128        |       2.67 ms |       0.55 ms |          3.21 ms |       20.5% | ✅ SAFE RT
+256        |       5.33 ms |       0.61 ms |          5.94 ms |       11.4% | ✅ SAFE RT
+512        |      10.67 ms |       0.73 ms |         11.39 ms |        6.8% | ✅ SAFE RT
+👉 Conclusion for V2: Suitable for real-time from buffer size 64 and above.
+
+📦 MODEL: V3 | Parameters: 49,665 | Best Val Loss: 0.486662
+--------------------------------------------------------------------------------------------------------------
+Buffer     | Buff Latency    | Proc Time       | Total Latency      | CPU Load     | Status
+--------------------------------------------------------------------------------------------------------------
+64         |       1.33 ms |       0.70 ms |          2.03 ms |       52.3% | ✅ SAFE RT
+128        |       2.67 ms |       0.74 ms |          3.41 ms |       27.8% | ✅ SAFE RT
+256        |       5.33 ms |       0.81 ms |          6.15 ms |       15.3% | ✅ SAFE RT
+512        |      10.67 ms |       0.95 ms |         11.62 ms |        8.9% | ✅ SAFE RT
+👉 Conclusion for V3: Suitable for real-time from buffer size 64 and above.
+
+==============================================================================================================
+Note: 'True Real-time' (perceived zero latency) requires Total Latency < 10ms.
