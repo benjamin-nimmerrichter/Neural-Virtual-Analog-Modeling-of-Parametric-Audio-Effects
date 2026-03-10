@@ -54,13 +54,35 @@ The repository evaluates three distinct architectural variations to balance para
 | **Parameter Conditioning**  | Concat        | Concat       | FiLM          |
 | **Est. Parameter Count**    | ~ 31k         | ~ 32k        | ~ 40k         |
 
-## 🛠️ Requirements
 
-Ensure you have the required dependencies installed. Python 3.8+ is recommended.
 
-```bash
-pip install torch torchaudio auraloss tqdm pyloudnorm numpy
+### 🛠️ Requirements
+
+This project is developed and tested on **Linux** (CachyOS/Arch/Ubuntu).
+
+- **Python Version:** 3.10.19 (recommended 3.10+)
+
+- **Hardware:** CUDA-enabled GPU is recommended for training, while inference is optimized for CPU.
+
+To install all necessary dependencies, run:
+
+Bash
+
 ```
+pip install -r requirements.txt
+```
+
+**Key dependencies include:**
+
+- `torch` & `torchaudio` (Core Deep Learning)
+
+- `librosa` & `pyloudnorm` & `soundfile` (Audio Processing & Normalization)
+
+- `auraloss` (Differentiable Audio Loss Functions)
+
+- `matplotlib` & `tqdm` (Visualization & Progress tracking)
+
+---
 
 ## 🚀 Training & Benchmarking
 
